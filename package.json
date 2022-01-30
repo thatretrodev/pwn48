@@ -1,0 +1,28 @@
+{
+  "name": "pwn48",
+  "version": "1.0.0",
+  "description": "A tool containing a lot of mk48.io exploits.",
+  "main": "dist/index.js",
+  "bin": "dist/index.js",
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --platform=node --format=cjs --outfile=dist/index.js",
+    "dist": "npm run build;pkg -t node16-linux-x64 -o dist/pwn48 .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thatretrodev/pwn48.git"
+  },
+  "author": "thatretrodev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thatretrodev/pwn48/issues"
+  },
+  "homepage": "https://github.com/thatretrodev/pwn48#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.13",
+    "esbuild": "^0.14.14",
+    "pkg": "^5.5.2",
+    "ws": "^8.4.2"
+  }
+}
